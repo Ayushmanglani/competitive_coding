@@ -4,4 +4,3 @@ class Solution:
         for i in nums:
             if count[i]>len(nums)//2:
                 return(i)
-                break
