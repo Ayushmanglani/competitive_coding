@@ -17,4 +17,4 @@ class Solution:
                     break
             return True    
         except:
-            return 'Runtime Error'
+            return 
