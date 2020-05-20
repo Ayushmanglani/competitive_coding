@@ -11,7 +11,7 @@ def col(sr,sc):
         if sc-1>=0 and img[sr][sc-1] == oldColor:
             col(sr,sc-1)
         return img
-        
+    
 class Solution:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, newColor: int) -> List[List[int]]:
         global lr,lc,oldColor,x,nc,img
