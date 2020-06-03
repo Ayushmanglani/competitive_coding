@@ -18,6 +18,5 @@ class Solution:
                 else:
                     tcost += costs[i][0]
                     n1 += 1
-            else:
-                tcost += costs[i][0]
+            else: tcost += costs[i][0]
         return tcost
