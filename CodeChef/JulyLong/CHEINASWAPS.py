@@ -25,10 +25,6 @@ def solve(test):
         else:
             dict_b[b] = 1
 
-    # print('all:', d_total)
-    # print('a:', d_a)
-    # print('b:', d_b)
-
     isAnsExist = True
     for key in dict_total:
         if (dict_total[key]) % 2 == 1:
