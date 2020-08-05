@@ -31,3 +31,40 @@ class WordDictionary:
             if match:
                 return True
         return False
+
+#Method 2
+class WordDictionary:
+
+    def __init__(self):
+        
+        self.node = {}
+
+    def addWord(self, word: str) -> None:
+        
+        
+        n = self.node
+        for letter in word:
+            if letter not in n:
+                n[letter] = {}
+            n = n[letter]
+        n['end'] = 'yes' # indicates end of a word
+
+    def search(self, word: str) -> bool:
+        
+        def sUtil(word,node):
+            if len(word) == 0:
+                return "end" in node # if the word in the tree ends here. Then return True else False.
+            
+            if word[0] == '.': 
+                ans = False
+                for k in node:
+                    if k!='end':
+                        ans = ans or sUtil(word[1:],node[k]) 
+                return ans
+            elif word[0] in node:
+                node = node[word[0]]
+                return sUtil(word[1:],node)
+            else:
+                return False
+        
+        return sUtil(word,self.node)
