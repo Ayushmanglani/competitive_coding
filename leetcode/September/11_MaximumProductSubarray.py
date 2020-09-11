@@ -14,3 +14,16 @@ class Solution:
                 dp[i] = dpn[i-1]*nums[i]
                 dpn[i] = min(nums[i]*dp[i-1],nums[i])
         return max(dp)
+
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        maxval, minval = nums[0], nums[0]
+        if len(nums) == 1:
+            return maxval
+        gmax = maxval
+        for n in nums[1:]:
+            maxval, minval = max(n, n * maxval, n * minval), min(n, n * minval, n * maxval)        
+            gmax = max(maxval, gmax)
+        return gmax
+
+                
