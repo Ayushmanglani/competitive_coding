@@ -16,8 +16,7 @@ class Solution:
                 return True
             for node in graph[curr_node]:
                 if(dfs(node[0],dst,val*node[1],visited)):
-                    return True
-            
+                    return True            
             return False
         for query in queries:
             src = query[0]
