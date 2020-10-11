@@ -1,8 +1,6 @@
 class Solution:
     def findMinArrowShots(self, points: List[List[int]]) -> int:
-        """
-        Base Case: zero balloons
-        """
+        """Base Case: zero balloons"""
         if points == []:
             return 0
         """
