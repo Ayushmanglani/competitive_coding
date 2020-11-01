@@ -1,4 +1,4 @@
-
+#Convert Binary Number in a Linked List to Integer
 class Solution(object):
     def getDecimalValue(self, head):
         s = ""
