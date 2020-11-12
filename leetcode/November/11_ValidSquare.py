@@ -1,5 +1,6 @@
 class Solution(object):
     def validSquare(self, p1, p2, p3, p4):
+
         def dist(p,q):
             return (p[0]-q[0])**2 + (p[1]-q[1])**2
         
