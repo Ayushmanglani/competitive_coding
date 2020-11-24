@@ -6,7 +6,7 @@ class Solution(object):
                 # empty node
                 # Both not to take and take are zero
                 return (0, 0)
-                
+
             # General case:
             # profit tuple of left sub-tree
             left = helper(node.left)
@@ -21,3 +21,15 @@ class Solution(object):
             
             return (not_to_take_cur, take_cur)
         return max(helper(node=root))
+
+class Solution(object):
+    def rob(self, root):
+        def dfs(node):
+            if not node:
+                return [0, 0]
+            else:
+                l = dfs(node.left)
+                r = dfs(node.right)
+                return [node.val + l[1] + r[1], max(l) + max(r)]
+        ans = dfs(root)
+        return max(ans)        
