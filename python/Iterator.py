@@ -1,7 +1,7 @@
 '''
 Iterators allow us to create and work with lazy iterable which means you can use an iterator for the lazy evaluation. This allows you to get the next element in the list without re-calculating all of the previous elements. Iterators can save us a lot of memory and CPU time.
 
-Python has many built-in classes that are iterators, e.g — enumerate, map ,filer , zipand reversed etc. objects are iterators.
+Python has many built-in classes that are iterators, e.g — enumerate, map ,filer , zip and reversed etc. objects are iterators.
 
 Python iterator objects are required to support two methods while following the iterator protocol.
 __iter__ returns the iterator object itself. This is used in for and in statements.
