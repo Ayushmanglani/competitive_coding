@@ -11,3 +11,11 @@ class Solution(object):
                     nodes.append(curr.left)
                 if curr.right:
                     nodes.append(curr.right)
+
+class Solution(object):
+    def getTargetCopy(self, original, cloned, target):
+        if cloned == None:
+            return None
+        if target.val == cloned.val:
+            return cloned
+        return self.getTargetCopy(original, cloned.left, target) or self.getTargetCopy(original, cloned.right, target)
