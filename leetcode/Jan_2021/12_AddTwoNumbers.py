@@ -19,3 +19,22 @@ class Solution(object):
             n.next = ListNode(val)
             n = n.next
         return root.next
+
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
+        carry = 0
+        dummy = head = ListNode() # Need to return actual head later
+        while l1 or l2 or carry:
+            val1 = l1.val if l1 else 0
+            val2 = l2.val if l2 else 0
+            
+            total = val1 + val2 + carry
+            carry = total // 10 # floor div and round to nearest int
+            
+            head.next = ListNode(total % 10)
+            head = head.next
+            
+            l1 = l1.next if l1 else None
+            l2 = l2.next if l2 else None
+            
+        return dummy.next        
